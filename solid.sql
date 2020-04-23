@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2020 at 10:43 AM
+-- Generation Time: Apr 23, 2020 at 11:21 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -39,6 +39,13 @@ CREATE TABLE `clients` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`id`, `groom_name`, `groom_birthdate`, `bride_name`, `bride_birthdate`, `wedding_anniv`, `contact_info`, `created_at`, `updated_at`) VALUES
+(1, 'Test Groom', '2020-04-20', 'Test Bride', '2020-04-20', '2020-04-20', 'Test Info', '2020-04-20 01:34:11', '2020-04-20 02:05:03');
 
 -- --------------------------------------------------------
 
@@ -98,12 +105,12 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (29, 4, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 1, '{}', 11),
 (30, 5, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (31, 5, 'supplier_name', 'text', 'Supplier Name', 0, 1, 1, 1, 1, 1, '{}', 2),
-(32, 5, 'supplier_address', 'text', 'Supplier Address', 0, 0, 0, 0, 0, 1, '{}', 4),
-(33, 5, 'supplier_contact', 'text', 'Supplier Contact', 0, 0, 0, 0, 0, 1, '{}', 5),
-(35, 5, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 8),
-(36, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
-(37, 5, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 1, '{}', 10),
-(38, 5, 'price_histories_id', 'text', 'Price Histories', 0, 1, 1, 1, 1, 1, '{}', 7),
+(32, 5, 'supplier_address', 'text', 'Supplier Address', 0, 1, 1, 1, 1, 1, '{}', 3),
+(33, 5, 'supplier_contact', 'text', 'Supplier Contact', 0, 1, 1, 1, 1, 1, '{}', 4),
+(35, 5, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 9),
+(36, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 10),
+(37, 5, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 1, '{}', 11),
+(38, 5, 'price_histories_id', 'text', 'Price Histories', 0, 1, 1, 1, 1, 1, '{}', 8),
 (39, 6, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (41, 6, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 7),
 (42, 6, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
@@ -180,11 +187,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (124, 15, 'total_price', 'text', 'Total Price', 0, 1, 1, 1, 1, 1, '{}', 18),
 (125, 16, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (126, 16, 'groom_name', 'text', 'Groom Name', 0, 1, 1, 1, 1, 1, '{}', 2),
-(127, 16, 'groom_birthdate', 'text', 'Groom Birthdate', 0, 1, 1, 1, 1, 1, '{}', 3),
+(127, 16, 'groom_birthdate', 'date', 'Groom Birthdate', 0, 1, 1, 1, 1, 1, '{}', 3),
 (128, 16, 'bride_name', 'text', 'Bride Name', 0, 1, 1, 1, 1, 1, '{}', 4),
-(129, 16, 'bride_birthdate', 'text', 'Bride Birthdate', 0, 1, 1, 1, 1, 1, '{}', 5),
-(130, 16, 'wedding_anniv', 'text', 'Wedding Anniv', 0, 1, 1, 1, 1, 1, '{}', 6),
-(131, 16, 'contact_info', 'text', 'Contact Info', 0, 1, 1, 1, 1, 1, '{}', 7),
+(129, 16, 'bride_birthdate', 'date', 'Bride Birthdate', 0, 1, 1, 1, 1, 1, '{}', 5),
+(130, 16, 'wedding_anniv', 'date', 'Wedding Anniv', 0, 1, 1, 1, 1, 1, '{}', 6),
+(131, 16, 'contact_info', 'text_area', 'Contact Info', 0, 1, 1, 1, 1, 1, '{}', 7),
 (132, 16, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 8),
 (133, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
 (134, 4, 'supplier', 'text', 'Supplier', 0, 1, 1, 1, 1, 1, '{}', 7),
@@ -201,8 +208,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (156, 18, 'date', 'text', 'Date', 0, 1, 1, 1, 1, 1, '{}', 9),
 (157, 18, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 10),
 (158, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
-(159, 5, 'product', 'text', 'Product', 0, 1, 1, 1, 1, 1, '{}', 3),
-(160, 5, 'current_price', 'text', 'Current Price', 0, 1, 1, 1, 1, 1, '{}', 6),
+(159, 5, 'product', 'text', 'Product', 0, 1, 1, 1, 1, 1, '{}', 6),
+(160, 5, 'current_price', 'text', 'Current Price', 0, 1, 1, 1, 1, 1, '{}', 7),
 (161, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (162, 20, 'package', 'text', 'Package', 0, 1, 1, 1, 1, 1, '{}', 2),
 (163, 20, 'location', 'text', 'Location', 0, 1, 1, 1, 1, 1, '{}', 3),
@@ -213,7 +220,16 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (168, 20, 'time', 'text', 'Time', 0, 1, 1, 1, 1, 1, '{}', 8),
 (169, 20, 'date', 'text', 'Date', 0, 1, 1, 1, 1, 1, '{}', 9),
 (170, 20, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 10),
-(171, 20, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11);
+(171, 20, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
+(172, 5, 'supplier_email', 'text', 'Supplier Email', 0, 1, 1, 1, 1, 1, '{}', 5),
+(176, 21, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(177, 21, 'supplier_name', 'text', 'Supplier Name', 0, 1, 1, 1, 1, 1, '{}', 2),
+(178, 21, 'agent_name', 'text', 'Agent Name', 0, 1, 1, 1, 1, 1, '{}', 3),
+(179, 21, 'agent_contact', 'text', 'Agent Contact', 0, 1, 1, 1, 1, 1, '{}', 4),
+(180, 21, 'agent_email', 'text', 'Agent Email', 0, 1, 1, 1, 1, 1, '{}', 5),
+(181, 21, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 6),
+(182, 21, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
+(183, 5, 'agents', 'text', 'Agents', 0, 1, 1, 1, 1, 1, '{}', 12);
 
 -- --------------------------------------------------------
 
@@ -248,7 +264,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2020-02-22 06:14:45', '2020-02-22 06:14:45'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2020-02-22 06:14:45', '2020-02-22 06:14:45'),
 (4, 'ingredients', 'ingredients', 'Ingredient', 'Ingredients', NULL, 'App\\Ingredient', NULL, 'App\\Http\\Controllers\\Voyager\\IngredientsController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:52:31', '2020-04-14 02:52:09'),
-(5, 'suppliers', 'suppliers', 'Supplier', 'Suppliers', NULL, 'App\\Supplier', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:54:47', '2020-04-08 00:49:15'),
+(5, 'suppliers', 'suppliers', 'Supplier', 'Suppliers', NULL, 'App\\Supplier', NULL, 'App\\Http\\Controllers\\Voyager\\SuppliersController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:54:47', '2020-04-22 23:57:43'),
 (6, 'recipes', 'recipes', 'Recipe', 'Recipes', NULL, 'App\\Recipe', NULL, 'App\\Http\\Controllers\\Voyager\\RecipesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:58:29', '2020-02-27 10:58:26'),
 (7, 'dishes', 'dishes', 'Dish', 'Dishes', NULL, 'App\\Dish', NULL, 'App\\Http\\Controllers\\Voyager\\DishesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 11:00:44', '2020-04-15 02:08:06'),
 (9, 'main_dishes', 'main-dishes', 'Main Dish', 'Main Dishes', NULL, 'App\\MainDish', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-02-27 11:18:32', '2020-02-27 11:18:32'),
@@ -257,9 +273,10 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (13, 'services', 'services', 'Service', 'Services', NULL, 'App\\Service', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 12:26:48', '2020-02-27 12:32:14'),
 (14, 'venues', 'venues', 'Location', 'Locations', NULL, 'App\\Venue', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 12:27:01', '2020-03-31 01:24:51'),
 (15, 'packages', 'packages', 'Package', 'Packages', NULL, 'App\\Package', NULL, 'App\\Http\\Controllers\\Voyager\\PackagesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 12:56:56', '2020-02-27 13:47:17'),
-(16, 'clients', 'clients', 'Client', 'Clients', NULL, 'App\\Client', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-02-29 04:30:32', '2020-02-29 04:30:32'),
+(16, 'clients', 'clients', 'Client', 'Clients', NULL, 'App\\Client', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-29 04:30:32', '2020-04-20 01:34:38'),
 (18, 'sales', 'sales', 'Sale Tracking', 'Sales Tracking', NULL, 'App\\Sale', NULL, '\\App\\Http\\Controllers\\Voyager\\SalesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-04-08 00:31:59', '2020-04-08 00:31:59'),
-(20, 'purchase_orders', 'purchase-orders', 'Purchase Order', 'Purchase Orders', NULL, 'App\\PurchaseOrder', NULL, 'App\\Http\\Controllers\\Voyager\\PurchaseOrderController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-04-15 01:42:23', '2020-04-15 01:42:23');
+(20, 'purchase_orders', 'purchase-orders', 'Purchase Order', 'Purchase Orders', NULL, 'App\\PurchaseOrder', NULL, 'App\\Http\\Controllers\\Voyager\\PurchaseOrderController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-04-15 01:42:23', '2020-04-15 01:42:23'),
+(21, 'supplier_agents', 'supplier-agents', 'Supplier Agent', 'Supplier Agents', NULL, 'App\\SupplierAgent', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-04-22 23:56:37', '2020-04-22 23:56:37');
 
 -- --------------------------------------------------------
 
@@ -361,7 +378,8 @@ CREATE TABLE `materials` (
 
 INSERT INTO `materials` (`id`, `material_name`, `remarks`, `unit_price`, `unit_cost`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (2, 'Material 1', 'asdasd', '100', '50', '2020-02-27 12:31:01', '2020-02-27 12:31:49', NULL),
-(3, 'Material 2', NULL, '750', '500', '2020-02-27 14:07:55', '2020-02-27 14:07:55', NULL);
+(3, 'Material 2', NULL, '750', '500', '2020-02-27 14:07:55', '2020-02-27 14:07:55', NULL),
+(4, 'Test', 'Test', '6', '4', '2020-04-21 02:04:22', '2020-04-21 02:08:08', NULL);
 
 -- --------------------------------------------------------
 
@@ -457,11 +475,11 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (15, 1, 'Dishes', '', '_self', NULL, '#000000', 22, 3, '2020-02-27 11:00:44', '2020-04-15 02:03:36', 'voyager.dishes.index', 'null'),
 (18, 1, 'Menus', '', '_self', NULL, '#000000', 22, 4, '2020-02-27 11:21:17', '2020-04-15 02:03:36', 'voyager.menu-dishes.index', 'null'),
 (22, 1, 'Profiles', '', '_self', 'voyager-folder', '#000000', NULL, 5, '2020-02-27 11:48:35', '2020-04-15 01:42:36', NULL, ''),
-(23, 1, 'Materials', '', '_self', NULL, '#000000', 22, 7, '2020-02-27 12:26:19', '2020-03-31 01:24:02', 'voyager.materials.index', 'null'),
-(24, 1, 'Services', '', '_self', NULL, '#000000', 22, 8, '2020-02-27 12:26:48', '2020-03-31 01:24:08', 'voyager.services.index', 'null'),
-(25, 1, 'Locations', '', '_self', NULL, '#000000', 22, 9, '2020-02-27 12:27:01', '2020-03-31 01:24:30', 'voyager.venues.index', 'null'),
-(26, 1, 'Packages', '', '_self', NULL, '#000000', 22, 10, '2020-02-27 12:56:56', '2020-03-31 01:24:19', 'voyager.packages.index', 'null'),
-(27, 1, 'Clients', '', '_self', NULL, NULL, 22, 6, '2020-02-29 04:30:32', '2020-03-31 01:17:36', 'voyager.clients.index', NULL),
+(23, 1, 'Materials', '', '_self', NULL, '#000000', 22, 8, '2020-02-27 12:26:19', '2020-04-22 23:56:48', 'voyager.materials.index', 'null'),
+(24, 1, 'Services', '', '_self', NULL, '#000000', 22, 9, '2020-02-27 12:26:48', '2020-04-22 23:56:48', 'voyager.services.index', 'null'),
+(25, 1, 'Locations', '', '_self', NULL, '#000000', 22, 10, '2020-02-27 12:27:01', '2020-04-22 23:56:48', 'voyager.venues.index', 'null'),
+(26, 1, 'Packages', '', '_self', NULL, '#000000', 22, 11, '2020-02-27 12:56:56', '2020-04-22 23:56:48', 'voyager.packages.index', 'null'),
+(27, 1, 'Clients', '', '_self', NULL, NULL, 22, 7, '2020-02-29 04:30:32', '2020-04-22 23:56:48', 'voyager.clients.index', NULL),
 (28, 2, 'Dashboard', '/test', '_self', 'voyager-calendar', '#000000', NULL, 1, '2020-03-30 23:54:23', '2020-03-30 23:55:22', NULL, ''),
 (29, 2, 'Current View', '/test', '_self', NULL, '#000000', 28, 1, '2020-03-30 23:55:00', '2020-03-30 23:55:23', NULL, ''),
 (30, 2, 'Annual View', '/test', '_self', NULL, '#000000', 28, 2, '2020-03-30 23:55:14', '2020-03-30 23:55:24', NULL, ''),
@@ -471,7 +489,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (34, 2, 'Users', '/test', '_self', 'voyager-people', '#000000', NULL, 15, '2020-03-30 23:56:46', '2020-03-30 23:57:10', NULL, ''),
 (35, 2, 'Settings', '/test', '_self', 'voyager-settings', '#000000', NULL, 16, '2020-03-30 23:57:03', '2020-03-30 23:57:03', NULL, ''),
 (39, 1, 'Sales Tracking', '', '_self', 'voyager-basket', '#000000', NULL, 3, '2020-04-08 00:31:59', '2020-04-15 01:42:36', 'voyager.sales.index', 'null'),
-(41, 1, 'Purchase Orders', '', '_self', 'voyager-tag', '#000000', NULL, 2, '2020-04-15 01:42:23', '2020-04-15 01:42:40', 'voyager.purchase-orders.index', 'null');
+(41, 1, 'Purchase Orders', '', '_self', 'voyager-tag', '#000000', NULL, 2, '2020-04-15 01:42:23', '2020-04-15 01:42:40', 'voyager.purchase-orders.index', 'null'),
+(42, 1, 'Supplier Agents', '', '_self', NULL, NULL, 22, 6, '2020-04-22 23:56:37', '2020-04-22 23:56:48', 'voyager.supplier-agents.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -511,7 +530,39 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (19, '2017_11_26_015000_create_user_roles_table', 1),
 (20, '2018_03_11_000000_add_user_settings', 1),
 (21, '2018_03_14_000000_add_details_to_data_types_table', 1),
-(22, '2018_03_16_000000_make_settings_value_nullable', 1);
+(22, '2018_03_16_000000_make_settings_value_nullable', 1),
+(23, '2020_04_22_095601_create_clients_table', 0),
+(24, '2020_04_22_095601_create_data_rows_table', 0),
+(25, '2020_04_22_095601_create_data_types_table', 0),
+(26, '2020_04_22_095601_create_dishes_table', 0),
+(27, '2020_04_22_095601_create_ingredient_price_histories_table', 0),
+(28, '2020_04_22_095601_create_ingredients_table', 0),
+(29, '2020_04_22_095601_create_materials_table', 0),
+(30, '2020_04_22_095601_create_menu_dishes_table', 0),
+(31, '2020_04_22_095601_create_menu_items_table', 0),
+(32, '2020_04_22_095601_create_menus_table', 0),
+(33, '2020_04_22_095601_create_packages_table', 0),
+(34, '2020_04_22_095601_create_password_resets_table', 0),
+(35, '2020_04_22_095601_create_permission_role_table', 0),
+(36, '2020_04_22_095601_create_permissions_table', 0),
+(37, '2020_04_22_095601_create_purchase_orders_table', 0),
+(38, '2020_04_22_095601_create_recipes_table', 0),
+(39, '2020_04_22_095601_create_roles_table', 0),
+(40, '2020_04_22_095601_create_sales_table', 0),
+(41, '2020_04_22_095601_create_services_table', 0),
+(42, '2020_04_22_095601_create_settings_table', 0),
+(43, '2020_04_22_095601_create_side_dishes_table', 0),
+(44, '2020_04_22_095601_create_supplier_price_histories_table', 0),
+(45, '2020_04_22_095601_create_suppliers_table', 0),
+(46, '2020_04_22_095601_create_translations_table', 0),
+(47, '2020_04_22_095601_create_user_roles_table', 0),
+(48, '2020_04_22_095601_create_users_table', 0),
+(49, '2020_04_22_095601_create_venues_table', 0),
+(50, '2020_04_22_095603_add_foreign_keys_to_data_rows_table', 0),
+(51, '2020_04_22_095603_add_foreign_keys_to_menu_items_table', 0),
+(52, '2020_04_22_095603_add_foreign_keys_to_permission_role_table', 0),
+(53, '2020_04_22_095603_add_foreign_keys_to_user_roles_table', 0),
+(54, '2020_04_22_095603_add_foreign_keys_to_users_table', 0);
 
 -- --------------------------------------------------------
 
@@ -671,7 +722,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (103, 'read_purchase_orders', 'purchase_orders', '2020-04-15 01:42:23', '2020-04-15 01:42:23'),
 (104, 'edit_purchase_orders', 'purchase_orders', '2020-04-15 01:42:23', '2020-04-15 01:42:23'),
 (105, 'add_purchase_orders', 'purchase_orders', '2020-04-15 01:42:23', '2020-04-15 01:42:23'),
-(106, 'delete_purchase_orders', 'purchase_orders', '2020-04-15 01:42:23', '2020-04-15 01:42:23');
+(106, 'delete_purchase_orders', 'purchase_orders', '2020-04-15 01:42:23', '2020-04-15 01:42:23'),
+(107, 'browse_supplier_agents', 'supplier_agents', '2020-04-22 23:56:37', '2020-04-22 23:56:37'),
+(108, 'read_supplier_agents', 'supplier_agents', '2020-04-22 23:56:37', '2020-04-22 23:56:37'),
+(109, 'edit_supplier_agents', 'supplier_agents', '2020-04-22 23:56:37', '2020-04-22 23:56:37'),
+(110, 'add_supplier_agents', 'supplier_agents', '2020-04-22 23:56:37', '2020-04-22 23:56:37'),
+(111, 'delete_supplier_agents', 'supplier_agents', '2020-04-22 23:56:37', '2020-04-22 23:56:37');
 
 -- --------------------------------------------------------
 
@@ -779,7 +835,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (103, 1),
 (104, 1),
 (105, 1),
-(106, 1);
+(106, 1),
+(107, 1),
+(108, 1),
+(109, 1),
+(110, 1),
+(111, 1);
 
 -- --------------------------------------------------------
 
@@ -891,7 +952,8 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `service_name`, `remarks`, `unit_cost`, `unit_price`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Service 1', 'Test Service', '500', '1000', '2020-02-27 12:32:32', '2020-02-27 12:32:38', NULL);
+(1, 'Service 1', 'Test Service', '500', '1000', '2020-02-27 12:32:32', '2020-02-27 12:32:38', NULL),
+(2, 'Test', 'Test', '3000', '5000', '2020-04-21 02:10:12', '2020-04-21 02:12:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -958,15 +1020,33 @@ CREATE TABLE `suppliers` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   `product` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `current_price` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `current_price` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `supplier_email` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `agents` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `suppliers`
 --
 
-INSERT INTO `suppliers` (`id`, `supplier_name`, `supplier_address`, `supplier_contact`, `price_histories_id`, `created_at`, `updated_at`, `deleted_at`, `product`, `current_price`) VALUES
-(1, 'Supplier 1', NULL, NULL, NULL, '2020-02-27 09:56:51', '2020-02-27 09:56:51', NULL, NULL, NULL);
+INSERT INTO `suppliers` (`id`, `supplier_name`, `supplier_address`, `supplier_contact`, `price_histories_id`, `created_at`, `updated_at`, `deleted_at`, `product`, `current_price`, `supplier_email`, `agents`) VALUES
+(1, 'Supplier 1', NULL, NULL, NULL, '2020-02-27 09:56:51', '2020-02-27 09:56:51', NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `supplier_agents`
+--
+
+CREATE TABLE `supplier_agents` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `supplier_name` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `agent_name` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `agent_contact` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `agent_email` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1217,6 +1297,12 @@ ALTER TABLE `suppliers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `supplier_agents`
+--
+ALTER TABLE `supplier_agents`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `supplier_price_histories`
 --
 ALTER TABLE `supplier_price_histories`
@@ -1259,19 +1345,19 @@ ALTER TABLE `venues`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `dishes`
@@ -1295,7 +1381,7 @@ ALTER TABLE `ingredient_price_histories`
 -- AUTO_INCREMENT for table `materials`
 --
 ALTER TABLE `materials`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `menus`
@@ -1313,13 +1399,13 @@ ALTER TABLE `menu_dishes`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `packages`
@@ -1331,7 +1417,7 @@ ALTER TABLE `packages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `purchase_orders`
@@ -1361,7 +1447,7 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -1380,6 +1466,12 @@ ALTER TABLE `side_dishes`
 --
 ALTER TABLE `suppliers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `supplier_agents`
+--
+ALTER TABLE `supplier_agents`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `supplier_price_histories`
