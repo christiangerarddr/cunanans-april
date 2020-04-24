@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2020 at 11:21 AM
+-- Generation Time: Apr 24, 2020 at 10:22 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -110,7 +110,6 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (35, 5, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 9),
 (36, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 10),
 (37, 5, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 1, '{}', 11),
-(38, 5, 'price_histories_id', 'text', 'Price Histories', 0, 1, 1, 1, 1, 1, '{}', 8),
 (39, 6, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (41, 6, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 7),
 (42, 6, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
@@ -122,11 +121,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (49, 7, 'dish_name', 'text', 'Dish Name', 0, 1, 1, 1, 1, 1, '{}', 2),
 (50, 7, 'dish_recipe_id', 'text', 'Dish Recipe Id', 0, 1, 1, 1, 1, 1, '{}', 3),
 (51, 7, 'category', 'select_dropdown', 'Category', 0, 1, 1, 1, 1, 1, '{\"default\":\"main\",\"options\":{\"main\":\"Main\",\"sidedish\":\"Side Dish\"}}', 5),
-(52, 7, 'unit_cost', 'text', 'Unit Cost', 0, 0, 0, 0, 0, 1, '{}', 6),
-(53, 7, 'unit_price', 'text', 'Unit Price', 0, 0, 0, 0, 0, 1, '{}', 7),
-(54, 7, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 8),
-(55, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
-(56, 7, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 1, '{}', 10),
+(52, 7, 'unit_cost', 'text', 'Unit Cost', 0, 1, 1, 1, 1, 1, '{}', 8),
+(53, 7, 'unit_price', 'text', 'Unit Price', 0, 1, 1, 1, 1, 1, '{}', 9),
+(54, 7, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 10),
+(55, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
+(56, 7, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 1, '{}', 12),
 (57, 7, 'dish_belongsto_recipe_relationship', 'relationship', 'recipes', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Recipe\",\"table\":\"recipes\",\"type\":\"belongsTo\",\"column\":\"dish_recipe_id\",\"key\":\"recipe_name\",\"label\":\"recipe_name\",\"pivot_table\":\"data_rows\",\"pivot\":\"0\",\"taggable\":\"0\"}', 4),
 (67, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (68, 9, 'manu_name', 'text', 'Manu Name', 0, 1, 1, 1, 1, 1, '{}', 2),
@@ -138,7 +137,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (74, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (76, 11, 'side_dishes', 'text', 'Side Dishes', 0, 1, 1, 1, 1, 1, '{}', 4),
 (77, 11, 'main_dishes', 'text', 'Main Dishes', 0, 1, 1, 1, 1, 1, '{}', 3),
-(78, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(78, 11, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 5),
 (79, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
 (80, 11, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 1, '{}', 7),
 (81, 12, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
@@ -209,7 +208,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (157, 18, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 10),
 (158, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
 (159, 5, 'product', 'text', 'Product', 0, 1, 1, 1, 1, 1, '{}', 6),
-(160, 5, 'current_price', 'text', 'Current Price', 0, 1, 1, 1, 1, 1, '{}', 7),
+(160, 5, 'current_price', 'text', 'Current Price', 0, 0, 0, 0, 0, 1, '{}', 7),
 (161, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (162, 20, 'package', 'text', 'Package', 0, 1, 1, 1, 1, 1, '{}', 2),
 (163, 20, 'location', 'text', 'Location', 0, 1, 1, 1, 1, 1, '{}', 3),
@@ -229,7 +228,12 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (180, 21, 'agent_email', 'text', 'Agent Email', 0, 1, 1, 1, 1, 1, '{}', 5),
 (181, 21, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 1, '{}', 6),
 (182, 21, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
-(183, 5, 'agents', 'text', 'Agents', 0, 1, 1, 1, 1, 1, '{}', 12);
+(183, 5, 'agents', 'text', 'Agents', 0, 1, 1, 1, 1, 1, '{}', 12),
+(184, 7, 'sub_categoty', 'text', 'Sub Categoty', 0, 1, 1, 1, 1, 1, '{}', 6),
+(185, 7, 'side_dish_and_sauce', 'text', 'Side Dish And Sauce', 0, 1, 1, 1, 1, 1, '{}', 7),
+(186, 5, 'price_histories', 'text', 'Price Histories', 0, 0, 0, 0, 0, 1, '{}', 8),
+(187, 4, 'price_history_date', 'text', 'Price History Date', 0, 0, 0, 1, 0, 1, '{}', 12),
+(188, 4, 'price_history_supplier', 'text', 'Price History Supplier', 0, 0, 0, 1, 0, 1, '{}', 13);
 
 -- --------------------------------------------------------
 
@@ -263,12 +267,12 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2020-02-22 06:14:45', '2020-02-22 06:14:45'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2020-02-22 06:14:45', '2020-02-22 06:14:45'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2020-02-22 06:14:45', '2020-02-22 06:14:45'),
-(4, 'ingredients', 'ingredients', 'Ingredient', 'Ingredients', NULL, 'App\\Ingredient', NULL, 'App\\Http\\Controllers\\Voyager\\IngredientsController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:52:31', '2020-04-14 02:52:09'),
-(5, 'suppliers', 'suppliers', 'Supplier', 'Suppliers', NULL, 'App\\Supplier', NULL, 'App\\Http\\Controllers\\Voyager\\SuppliersController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:54:47', '2020-04-22 23:57:43'),
+(4, 'ingredients', 'ingredients', 'Ingredient', 'Ingredients', NULL, 'App\\Ingredient', NULL, 'App\\Http\\Controllers\\Voyager\\IngredientsController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:52:31', '2020-04-23 23:39:42'),
+(5, 'suppliers', 'suppliers', 'Supplier', 'Suppliers', NULL, 'App\\Supplier', NULL, 'App\\Http\\Controllers\\Voyager\\SuppliersController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:54:47', '2020-04-23 02:10:15'),
 (6, 'recipes', 'recipes', 'Recipe', 'Recipes', NULL, 'App\\Recipe', NULL, 'App\\Http\\Controllers\\Voyager\\RecipesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 09:58:29', '2020-02-27 10:58:26'),
-(7, 'dishes', 'dishes', 'Dish', 'Dishes', NULL, 'App\\Dish', NULL, 'App\\Http\\Controllers\\Voyager\\DishesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 11:00:44', '2020-04-15 02:08:06'),
+(7, 'dishes', 'dishes', 'Dish', 'Dishes', NULL, 'App\\Dish', NULL, 'App\\Http\\Controllers\\Voyager\\DishesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 11:00:44', '2020-04-23 01:28:57'),
 (9, 'main_dishes', 'main-dishes', 'Main Dish', 'Main Dishes', NULL, 'App\\MainDish', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-02-27 11:18:32', '2020-02-27 11:18:32'),
-(11, 'menu_dishes', 'menu-dishes', 'Menu Dish', 'Menu Dishes', NULL, 'App\\MenuDish', NULL, 'App\\Http\\Controllers\\Voyager\\MenuDishesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 11:21:16', '2020-02-27 13:21:21'),
+(11, 'menu_dishes', 'menu-dishes', 'Menu Dish', 'Menu Dishes', NULL, 'App\\MenuDish', NULL, 'App\\Http\\Controllers\\Voyager\\MenuDishesController', NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 11:21:16', '2020-04-23 01:41:36'),
 (12, 'materials', 'materials', 'Material', 'Materials', NULL, 'App\\Material', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 12:26:19', '2020-02-27 12:31:41'),
 (13, 'services', 'services', 'Service', 'Services', NULL, 'App\\Service', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 12:26:48', '2020-02-27 12:32:14'),
 (14, 'venues', 'venues', 'Location', 'Locations', NULL, 'App\\Venue', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-02-27 12:27:01', '2020-03-31 01:24:51'),
@@ -293,22 +297,10 @@ CREATE TABLE `dishes` (
   `unit_price` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `sub_categoty` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `side_dish_and_sauce` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `dishes`
---
-
-INSERT INTO `dishes` (`id`, `dish_name`, `dish_recipe_id`, `category`, `unit_cost`, `unit_price`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Dish 1', 'Recipe 1', 'main', '500', '1250', '2020-02-27 11:07:44', '2020-02-27 12:22:50', NULL),
-(2, 'Dish 2', 'Recipe 1', 'sidedish', NULL, NULL, '2020-02-27 11:29:25', '2020-02-27 11:29:25', NULL),
-(3, 'Main 1', 'Recipe 2', 'main', NULL, NULL, '2020-02-27 11:44:33', '2020-02-27 12:06:54', NULL),
-(4, 'Main 2', NULL, 'main', NULL, NULL, '2020-02-27 11:44:39', '2020-02-27 11:44:39', NULL),
-(5, 'Side 1', NULL, 'sidedish', NULL, NULL, '2020-02-27 11:44:56', '2020-02-27 11:44:56', NULL),
-(6, 'Side 2', NULL, 'sidedish', NULL, NULL, '2020-02-27 11:45:03', '2020-02-27 11:45:03', NULL),
-(7, 'Side 3', 'Recipe 1', 'sidedish', '600', '900', '2020-02-27 14:32:34', '2020-02-27 14:32:34', NULL),
-(11, 'Hybrid', 'Hybrid Recipe', 'test', NULL, NULL, '2020-04-15 02:35:32', '2020-04-15 02:35:32', NULL);
 
 -- --------------------------------------------------------
 
@@ -327,17 +319,18 @@ CREATE TABLE `ingredients` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   `supplier` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `current_price` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `description` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price_history_date` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price_history_supplier` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `ingredients`
 --
 
-INSERT INTO `ingredients` (`id`, `item_name`, `weight`, `unit_of_measurement`, `price_history`, `created_at`, `updated_at`, `deleted_at`, `supplier`, `current_price`, `description`) VALUES
-(1, 'Rice', '5', 'KG', NULL, '2020-02-27 09:53:14', '2020-02-27 09:53:14', NULL, NULL, NULL, NULL),
-(2, 'Pork', '10', 'KG', '[null,\"50\"]', NULL, '2020-04-15 01:48:46', NULL, 'Supplier 1', '160', 'Porky'),
-(3, 'Test', NULL, 'KG', '[\"234\",\"230\",\"232\"]', NULL, '2020-04-15 01:44:59', NULL, 'Supplier 1', '232', 'asdasd');
+INSERT INTO `ingredients` (`id`, `item_name`, `weight`, `unit_of_measurement`, `price_history`, `created_at`, `updated_at`, `deleted_at`, `supplier`, `current_price`, `description`, `price_history_date`, `price_history_supplier`) VALUES
+(13, 'Salt', NULL, 'KG', '[\"50\"]', NULL, '2020-04-23 23:52:53', NULL, 'Supplier 1', '51', 'Salty', '[\"24\\/04\\/2020\"]', '[\"Supplier 1\"]'),
+(14, 'Rice', NULL, 'KG', NULL, '2020-04-24 00:21:47', '2020-04-24 00:21:47', NULL, 'Supplier 1', '50', 'Big Grain', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -417,19 +410,6 @@ CREATE TABLE `menu_dishes` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `menu_dishes`
---
-
-INSERT INTO `menu_dishes` (`id`, `menu_name`, `side_dishes`, `main_dishes`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(3, 'menu 1', '[\"Dish 2\"]', '[\"Dish 1\"]', '2020-02-27 11:40:20', '2020-02-27 11:40:20', NULL),
-(5, 'menu  2', '[\"Side 1\"]', '[\"Dish 1\"]', '2020-02-27 13:15:33', '2020-02-27 13:15:33', NULL),
-(7, 'menu 3', '[\"Side 2\"]', '[\"Main 1\"]', '2020-02-27 13:16:41', '2020-02-27 13:16:41', NULL),
-(8, 'Menu 4 Empty Test', '[\"N\\/A\"]', '[\"N\\/A\"]', '2020-02-27 13:20:37', '2020-02-27 13:20:37', NULL),
-(9, 'Menu 5 One Empty Test', '[\"N\\/A\"]', '[\"Dish 1\"]', '2020-02-27 13:21:05', '2020-02-27 13:21:05', NULL),
-(11, 'Sides Only', '[\"Side 3\"]', '[\"N\\/A\"]', '2020-02-27 14:33:17', '2020-02-27 14:33:17', NULL),
-(12, 'modal test', '[\"Dish 2\",\"Side 1\"]', '[\"Dish 1\",\"Main 1\"]', '2020-04-14 02:02:31', '2020-04-14 02:02:31', NULL);
 
 -- --------------------------------------------------------
 
@@ -883,10 +863,7 @@ CREATE TABLE `recipes` (
 --
 
 INSERT INTO `recipes` (`id`, `created_at`, `updated_at`, `deleted_at`, `recipe_name`, `ingredient_name`, `ingredient_weight`) VALUES
-(10, '2020-02-27 11:04:42', '2020-02-27 11:04:42', NULL, 'Recipe 1', '[\"1\",\"Pork\"]', '[\"2\",\"1\"]'),
-(11, '2020-02-27 12:06:38', '2020-02-27 12:06:38', NULL, 'Recipe 2', '[\"1\",\"Pork\"]', '[\"2\",\"3\"]'),
-(13, '2020-04-15 01:44:16', '2020-04-15 01:44:16', NULL, 'Recipe 3', '[\"1\",\"Pork\",\"Test\"]', '[\"1\",\"2\",\"3\"]'),
-(16, '2020-04-15 02:35:32', '2020-04-15 02:35:32', NULL, 'Hybrid Recipe', '[\"1\",\"Pork\",\"Test\"]', '[\"1\",\"2\",\"3\"]');
+(18, '2020-04-24 00:22:19', '2020-04-24 00:22:19', NULL, 'Salty Rice', '[\"Salt\",\"Rice\"]', '[\"2 table spoon\",\"1KG\"]');
 
 -- --------------------------------------------------------
 
@@ -1015,7 +992,7 @@ CREATE TABLE `suppliers` (
   `supplier_name` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `supplier_address` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `supplier_contact` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price_histories_id` int(11) DEFAULT NULL,
+  `price_histories` tinytext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -1029,8 +1006,8 @@ CREATE TABLE `suppliers` (
 -- Dumping data for table `suppliers`
 --
 
-INSERT INTO `suppliers` (`id`, `supplier_name`, `supplier_address`, `supplier_contact`, `price_histories_id`, `created_at`, `updated_at`, `deleted_at`, `product`, `current_price`, `supplier_email`, `agents`) VALUES
-(1, 'Supplier 1', NULL, NULL, NULL, '2020-02-27 09:56:51', '2020-02-27 09:56:51', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `suppliers` (`id`, `supplier_name`, `supplier_address`, `supplier_contact`, `price_histories`, `created_at`, `updated_at`, `deleted_at`, `product`, `current_price`, `supplier_email`, `agents`) VALUES
+(1, 'Supplier 1', 'Address 1', 'Contact Number 1', NULL, '2020-02-27 09:56:51', '2020-04-24 00:21:46', NULL, '[\"Salt\",\"Rice\"]', NULL, 'Email 1', NULL);
 
 -- --------------------------------------------------------
 
@@ -1047,6 +1024,13 @@ CREATE TABLE `supplier_agents` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `supplier_agents`
+--
+
+INSERT INTO `supplier_agents` (`id`, `supplier_name`, `agent_name`, `agent_contact`, `agent_email`, `created_at`, `updated_at`) VALUES
+(1, 'Supplier 1', 'Test', 'Test Contact Number', 'Test Email', '2020-04-23 03:01:47', '2020-04-23 03:06:37');
 
 -- --------------------------------------------------------
 
@@ -1351,7 +1335,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
 
 --
 -- AUTO_INCREMENT for table `data_types`
@@ -1369,7 +1353,7 @@ ALTER TABLE `dishes`
 -- AUTO_INCREMENT for table `ingredients`
 --
 ALTER TABLE `ingredients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `ingredient_price_histories`
@@ -1429,7 +1413,7 @@ ALTER TABLE `purchase_orders`
 -- AUTO_INCREMENT for table `recipes`
 --
 ALTER TABLE `recipes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -1471,7 +1455,7 @@ ALTER TABLE `suppliers`
 -- AUTO_INCREMENT for table `supplier_agents`
 --
 ALTER TABLE `supplier_agents`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `supplier_price_histories`
